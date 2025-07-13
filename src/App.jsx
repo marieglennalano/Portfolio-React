@@ -1,14 +1,12 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <div className="pt-20 text-center text-3xl">
-        {/* Replace this later with real content */}
-        Welcome to My Portfolio!
-      </div>
+      <Home />
     </div>
   );
 }
