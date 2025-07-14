@@ -6,6 +6,9 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Certifications from './pages/Certifications';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+
+      <ToastContainer position="top-right" autoClose={3000} theme="colored" />
+
     </div>
   );
 }

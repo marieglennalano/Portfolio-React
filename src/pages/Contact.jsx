@@ -1,29 +1,31 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    emailjs.sendForm(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
-      form.current,
-      'YOUR_PUBLIC_KEY'
-    ).then(
-      (result) => {
-        alert("✅ Message sent successfully!");
-        form.current.reset();
-      },
-      (error) => {
-        alert("❌ Message failed to send. Please try again.");
-        console.error(error);
-      }
-    );
-  };
+  emailjs.sendForm(
+    'service_39pq36a',
+    'template_7o666r6',
+    form.current,
+    'ipvRulV2QTsvEx43a'
+  ).then(
+    (result) => {
+      toast.success("Message sent successfully!");
+      form.current.reset();
+    },
+    (error) => {
+      toast.error("Message failed to send. Please try again.");
+      console.error(error);
+    }
+  );
+};
+
 
   return (
     <section id="contact" className="py-20 px-6 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
