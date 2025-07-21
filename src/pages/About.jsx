@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const skills = [
   { name: 'HTML5', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
@@ -17,33 +18,68 @@ const About = () => {
   return (
     <section id="about" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">ABOUT ME</h2>
-        <p className="text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-12">
+        {/* Heading */}
+        <motion.h2
+          className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          ABOUT ME
+        </motion.h2>
+
+        {/* Subheading */}
+        <motion.p
+          className="text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Here you will find more information about me, what I do, and my current skills mostly in terms
           of programming and technology.
-        </p>
+        </motion.p>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Column - About Text */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Get to know me!</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
               I'm a <strong>Frontend Focused Web Developer</strong> building and managing the front-end of websites and web applications that lead to the success of the overall product. Check out some of my work in the <strong>Projects</strong> section.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               I enjoy sharing content about what I've learned in <strong>Web Development</strong> to help others in the dev community. Feel free to connect with me on
-              <a href="https://linkedin.com" target="_blank" className="text-purple-600 dark:text-purple-400 underline mx-1">LinkedIn</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">LinkedIn</a>
               or see my work on
-              <a href="https://github.com" target="_blank" className="text-purple-600 dark:text-purple-400 underline mx-1">GitHub</a>.
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">GitHub</a>.
             </p>
-          </div>
+          </motion.div>
 
           {/* Right Column - Skill Logos */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">SKILLS</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 place-items-center">
               {skills.map((skill, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
+                <motion.div
+                  key={index}
+                  className="flex flex-col items-center text-center"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                >
                   <img
                     src={skill.src}
                     alt={skill.name}
@@ -51,10 +87,10 @@ const About = () => {
                     className="w-12 h-12 mb-2 grayscale hover:grayscale-0 transition duration-300"
                   />
                   <span className="text-sm text-gray-800 dark:text-gray-300">{skill.name}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
