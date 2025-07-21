@@ -40,7 +40,7 @@ const About = () => {
 
           {/* Right Column - Skill Logos */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">My Skills</h3>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">SKILLS</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 place-items-center">
               {skills.map((skill, index) => (
                 <div key={index} className="flex flex-col items-center text-center">
