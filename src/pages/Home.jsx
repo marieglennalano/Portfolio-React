@@ -1,32 +1,41 @@
+// src/pages/Home.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import bgImage from '../assets/hero-bg.jpg';
+import { ChevronDown } from 'lucide-react';
 
 const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-white dark:bg-black transition-colors duration-300"
+      className="min-h-screen relative flex items-center justify-center text-center bg-fixed bg-cover bg-center transition-colors duration-300"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
     >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 dark:bg-black/60 z-0"></div>
+
+      {/* Content */}
       <motion.div
-        className="max-w-3xl mx-auto px-6 text-center"
+        className="relative z-10 max-w-3xl px-6 text-white"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
         <motion.h1
-          className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+          className="text-4xl sm:text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Hi, I'm{' '}
-          <span className="text-blue-600 dark:text-blue-400">MARIE GLENN</span>
+          Hi, I'm <span className="text-blue-400">MARIE GLENN</span>
         </motion.h1>
 
         <motion.h2
-          className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-6"
+          className="text-xl sm:text-2xl mb-6 text-gray-200"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -36,7 +45,7 @@ const Home = () => {
         </motion.h2>
 
         <motion.p
-          className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8"
+          className="text-gray-300 leading-relaxed mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -56,6 +65,13 @@ const Home = () => {
           View My Projects
         </motion.a>
       </motion.div>
+
+      {/* Scroll-down hint */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <a href="#about" aria-label="Scroll Down">
+          <ChevronDown className="text-white w-7 h-7" />
+        </a>
+      </div>
     </section>
   );
 };
