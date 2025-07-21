@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import bgImage from '../assets/hero-bg.jpg';
