@@ -1,5 +1,5 @@
-// src/pages/Projects.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -36,15 +36,34 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Projects</h2>
+        {/* Section Heading */}
+        <motion.h2
+          className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          PROJECTS
+        </motion.h2>
+
+        {/* Projects Grid */}
         <div className="grid gap-10 md:grid-cols-2">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6 transition hover:shadow-xl"
+              className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-transform"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+                {project.title}
+              </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech, i) => (
                   <span
@@ -55,6 +74,7 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+
               <div className="flex gap-4">
                 <a
                   href={project.github}
@@ -73,7 +93,7 @@ const Projects = () => {
                   Live Demo
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
