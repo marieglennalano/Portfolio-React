@@ -1,4 +1,6 @@
+// src/App.jsx
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -7,14 +9,14 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Certifications from './pages/Certifications';
 import ScrollProgress from './components/ScrollProgress';
-import { ToastContainer } from 'react-toastify';
 import BackToTop from './components/BackToTop';
+import NotFound from './pages/NotFound';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-function App() {
+function MainSections() {
   return (
-    <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 min-h-screen">
+    <>
       <ScrollProgress />
       <Navbar />
       <Home />
@@ -23,11 +25,23 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-
-      <ToastContainer position="top-right" autoClose={3000} theme="colored" />
-
       <BackToTop />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 min-h-screen">
+        <Routes>
+          <Route path="/" element={<MainSections />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+
+        <ToastContainer position="top-right" autoClose={3000} theme="colored" />
+      </div>
+    </Router>
   );
 }
 

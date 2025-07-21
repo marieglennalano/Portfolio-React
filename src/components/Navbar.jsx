@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DarkModeToggle from './DarkModeToggle';
+import profileImage from '../assets/hero.jpg'; // Make sure this image exists in /src/assets
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,9 +12,16 @@ const Navbar = () => {
     <nav className="bg-white dark:bg-gray-900 shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
-          <div className="text-2xl font-bold text-gray-800 dark:text-white">
-            MyPortfolio
+          {/* Logo + Profile */}
+          <div className="flex items-center space-x-3">
+            <img
+              src={profileImage}
+              alt="Profile"
+              className="w-12 h-12 rounded-full"
+            />
+            <span className="text-2xl font-bold text-gray-800 dark:text-white">
+              MARIE GLENN ALANO
+            </span>
           </div>
 
           {/* Desktop Menu */}
@@ -23,7 +31,6 @@ const Navbar = () => {
             <a href="#projects" onClick={closeMenu} className="text-gray-700 dark:text-gray-200 hover:text-blue-500">Projects</a>
             <a href="#contact" onClick={closeMenu} className="text-gray-700 dark:text-gray-200 hover:text-blue-500">Contact</a>
 
-            {/* Resume Button (Google Drive view link) */}
             <a
               href="https://drive.google.com/file/d/1r98yXUnNIHRVXteb24S9ympDr1XKOjyz/view?usp=sharing"
               target="_blank"
@@ -41,7 +48,7 @@ const Navbar = () => {
             <DarkModeToggle />
             <button
               onClick={toggleMenu}
-              className="text-gray-800 dark:text-white focus:outline-none"
+              className="text-gray-800 dark:text-white focus:outline-none text-2xl"
             >
               {menuOpen ? '✖' : '☰'}
             </button>
@@ -57,7 +64,7 @@ const Navbar = () => {
           <a href="#projects" onClick={closeMenu} className="block text-gray-700 dark:text-gray-200 hover:text-blue-500">Projects</a>
           <a href="#contact" onClick={closeMenu} className="block text-gray-700 dark:text-gray-200 hover:text-blue-500">Contact</a>
           <a
-            href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
+            href="https://drive.google.com/file/d/1r98yXUnNIHRVXteb24S9ympDr1XKOjyz/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition"
