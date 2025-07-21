@@ -6,13 +6,16 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Certifications from './pages/Certifications';
+import ScrollProgress from './components/ScrollProgress';
 import { ToastContainer } from 'react-toastify';
+import BackToTop from './components/BackToTop';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 min-h-screen">
+      <ScrollProgress />
       <Navbar />
       <Home />
       <About />
@@ -23,6 +26,7 @@ function App() {
 
       <ToastContainer position="top-right" autoClose={3000} theme="colored" />
 
+      <BackToTop />
     </div>
   );
 }
