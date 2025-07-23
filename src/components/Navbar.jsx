@@ -32,7 +32,7 @@ const Navbar = () => {
             <a href="#contact" onClick={closeMenu} className="text-gray-700 dark:text-gray-200 hover:text-blue-500">Contact</a>
 
             <a
-              href="https://drive.google.com/file/d/1r98yXUnNIHRVXteb24S9ympDr1XKOjyz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1wWxhrUQfuw9Fmsnk5JRj7ce2v6de2RQU/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition"
@@ -64,7 +64,7 @@ const Navbar = () => {
           <a href="#projects" onClick={closeMenu} className="block text-gray-700 dark:text-gray-200 hover:text-blue-500">Projects</a>
           <a href="#contact" onClick={closeMenu} className="block text-gray-700 dark:text-gray-200 hover:text-blue-500">Contact</a>
           <a
-            href="https://drive.google.com/file/d/1r98yXUnNIHRVXteb24S9ympDr1XKOjyz/view?usp=sharing"
+            href="https://drive.google.com/file/d/1wWxhrUQfuw9Fmsnk5JRj7ce2v6de2RQU/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition"
