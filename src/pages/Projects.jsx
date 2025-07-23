@@ -63,14 +63,14 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="py-16 px-6 md:px-20 bg-gray-100"
+      className="py-16 px-6 md:px-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-300"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
       <motion.h2
-        className="text-4xl font-bold text-center mb-12"
+        className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -83,7 +83,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+            className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -98,12 +98,12 @@ const Projects = () => {
             />
             <div className="p-6">
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-blue-100 text-blue-700 text-sm font-medium px-3 py-1 rounded-md"
+                    className="bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-md"
                   >
                     {tech}
                   </span>
@@ -114,7 +114,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-900"
+                  className="bg-gray-800 dark:bg-gray-700 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-900 dark:hover:bg-gray-600"
                 >
                   GitHub
                 </a>
@@ -122,7 +122,7 @@ const Projects = () => {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700"
+                  className="bg-blue-600 dark:bg-blue-700 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 dark:hover:bg-blue-600"
                 >
                   Live Demo
                 </a>

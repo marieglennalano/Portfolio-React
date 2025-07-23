@@ -1,9 +1,9 @@
-// src/pages/Certifications.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
 import frontendImg from '../assets/frontend.png';
 import backendImg from '../assets/backend.png';
-// import fullstackImg from '../assets/fullstack.png';
 
 const certifications = [
   {
@@ -22,15 +22,24 @@ const certifications = [
   },
   {
     title: 'Full Stack Development Course (MERN)',
-    // image: fullstackImg,
+    image: '', 
     issuer: 'Zuitt Coding Bootcamp',
     date: '2023',
-    link: 'https://drive.google.com/file/d/1secDVA2o03TM5kDRN-Oy8TY3_UKoWEdo/view',
+    link: '', 
   },
-  // Add more certs here if needed
 ];
 
 const Certifications = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (link) => {
+    if (link) {
+      window.open(link, '_blank');
+    } else {
+      navigate('/404');
+    }
+  };
+
   return (
     <section
       id="certifications"
@@ -49,12 +58,10 @@ const Certifications = () => {
 
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {certifications.map((cert, index) => (
-            <motion.a
+            <motion.div
               key={index}
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg transition-shadow"
+              onClick={() => handleCardClick(cert.link)}
+              className="cursor-pointer bg-gray-100 dark:bg-gray-800 p-4 rounded-lg transition-shadow hover:shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
@@ -72,7 +79,7 @@ const Certifications = () => {
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {cert.issuer} &bull; {cert.date}
               </p>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>
