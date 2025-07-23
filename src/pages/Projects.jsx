@@ -15,7 +15,7 @@ const projects = [
     tech: ['React', 'Tailwind CSS', 'Vite'],
     image: portfolioImg,
     github: 'https://github.com/marieglennalano/Portfolio-React',
-    demo: '#',
+    demo: 'https://mgalano.vercel.app/',
   },
   {
     title: 'E-Commerce API Documentation',
