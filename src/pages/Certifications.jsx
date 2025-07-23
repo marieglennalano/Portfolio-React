@@ -21,7 +21,7 @@ const certifications = [
     link: 'https://drive.google.com/file/d/1secDVA2o03TM5kDRN-Oy8TY3_UKoWEdo/view',
   },
   {
-    title: 'Full Stack Development Course',
+    title: 'Full Stack Development Course (MERN)',
     // image: fullstackImg,
     issuer: 'Zuitt Coding Bootcamp',
     date: '2023',
