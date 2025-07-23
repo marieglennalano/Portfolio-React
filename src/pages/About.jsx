@@ -6,7 +6,7 @@ const skills = [
   { name: 'CSS3', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
   { name: 'JavaScript', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
   { name: 'React', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: 'Tailwind', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg' },
+  { name: 'Tailwind', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
   { name: 'Git', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
   { name: 'GitHub', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
   { name: 'MongoDB', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
@@ -55,9 +55,9 @@ const About = () => {
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               I enjoy sharing content about what I've learned in <strong>Web Development</strong> to help others in the dev community. Feel free to connect with me on
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/marie-glenn-alano-4aab99118/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">LinkedIn</a>
               or see my work on
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">GitHub</a>.
+              <a href="https://github.com/marieglennalano" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">GitHub</a>.
             </p>
           </motion.div>
 
