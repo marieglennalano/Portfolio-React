@@ -1,76 +1,85 @@
 import React from 'react';
+import portfolioImg from '../assets/projects/portfolio.png';
+import ecommerceImg from '../assets/projects/ecommerceAPI.png';
+import blogifyImg from '../assets/projects/blogify.png';
+import movieCatalogImg from '../assets/projects/movie.png';
+import fitnessTrackerImg from '../assets/projects/fitness.png';
+// import eduHubImg from '../assets/projects/project6.png';
+import SkinImg from '../assets/projects/skin.png';
+// import taskManagerImg from '../assets/projects/project8.png';
+
 
 const projects = [
   {
     title: 'Portfolio Website',
     description: 'A modern, responsive personal portfolio website built with Vite, React, and Tailwind CSS. Showcasing my projects, skills, and experience in web development.',
     tech: ['React', 'Tailwind CSS', 'Vite'],
-    image: 'https://source.unsplash.com/featured/?portfolio',
-    github: 'https://github.com/marieglennalano/portfolio',
+    image: portfolioImg,
+    github: 'https://github.com/marieglennalano/Portfolio-React',
     demo: '#'
   },
   {
     title: 'E-Commerce API Documentation',
     description: 'Dynamic E-commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman.',
-    tech: ['Express.js', 'Node.js', 'MongoDB', 'Postman'],
-    image: 'https://source.unsplash.com/featured/?api',
+    tech: ['Express.js', 'Node.js', 'MongoDB', 'Postman', 'AWS'],
+    image: ecommerceImg,
     github: 'https://github.com/marieglennalano',
     demo: 'https://documenter.getpostman.com/view/44617324/2sB2xCgos6'
   },
   {
-    title: 'Fitness Tracker App',
-    description: 'Track your workouts, set goals, and monitor progress with a sleek, responsive dashboard.',
+    title: 'Fitness Tracker',
+    description: 'Fitness Tracker Full Stack App A modern full-stack fitness tracking application built with React, Node.js, and MongoDB. Features include workout logging, progress visualization, user profile management, and responsive design. Frontend: React + Bootstrap Backend: Express + MongoDB + JWT Auth Deployed on: Vercel (Frontend) & Render (Backend)',
     tech: ['React', 'Bootstrap', 'MongoDB', 'Express.js'],
-    image: 'https://source.unsplash.com/featured/?fitness',
-    github: 'https://github.com/marieglennalano/fitness-tracker',
-    demo: '#'
+    image: fitnessTrackerImg,
+    github: 'https://github.com/marieglennalano/Fitness-Tracker-FS',
+    demo: 'https://fitness-tracker-fs.vercel.app/'
   },
   {
-    title: 'Blogify Platform',
-    description: 'A full-stack blog platform with rich text editor, comments, authentication, and admin dashboard.',
+    title: 'Blogify',
+    description: 'A responsive and modern blogging platform built with React, Bootstrap, and Google OAuth. This frontend connects to the Blogify backend API to allow users to create, read, comment on, and manage blog posts with authentication and animation features.',
     tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    image: 'https://source.unsplash.com/featured/?blog',
-    github: 'https://github.com/marieglennalano/blogify',
-    demo: '#'
+    image: blogifyImg,
+    github: 'https://github.com/marieglennalano/Blogify',
+    demo: 'https://blogify-sigma-seven.vercel.app/'
   },
   {
-    title: 'Movie Catalog App',
-    description: 'A responsive app to browse, filter, and manage movies. Includes admin features to manage data.',
-    tech: ['React', 'Express.js', 'MongoDB'],
-    image: 'https://source.unsplash.com/featured/?movies',
-    github: 'https://github.com/marieglennalano/movie-catalog',
-    demo: '#'
+    title: 'Movie Catalog',
+    description: 'A full-stack Movie Catalog web app where users can browse movies, view detailed information, and leave comments. Admins can manage the catalog by adding, editing, and deleting movies via a secure dashboard.',
+    tech: ['React', 'Bootsrap', 'Express.js', 'MongoDB'],
+    image: movieCatalogImg,
+    github: 'https://github.com/marieglennalano/Movie-Catalog-FS',
+    demo: '#https://movie-catalog-fs.vercel.app/'
   },
   {
-    title: 'AI Assistant UI (Toki)',
-    description: 'A voice-enabled AI assistant UI using Web Speech API and chat interface.',
-    tech: ['Vite', 'React', 'Tailwind CSS'],
-    image: 'https://source.unsplash.com/featured/?ai',
-    github: 'https://github.com/marieglennalano/toki-ai-ui',
-    demo: '#'
+    title: 'SkinCredible',
+    description: ' Full-stack e-commerce web application built as a capstone project. It features user authentication, product browsing, cart management, search functionality, and an admin dashboard for product and order management.',
+    tech: ['React', 'Bootstrap', 'Express.js', 'MongoDB', 'AWS'],
+    image: SkinImg,
+    github: 'https://github.com/marieglennalano/csp3-hosting-montesor-alano',
+    demo: 'https://csp3-hosting-montesor-alano.vercel.app/'
   },
-  {
-    title: 'Educational Resource Hub',
-    description: 'Single-page learning platform featuring categorized resources, interactive navigation, and smooth UI.',
-    tech: ['HTML', 'Bootstrap', 'JavaScript'],
-    image: 'https://source.unsplash.com/featured/?education',
-    github: 'https://github.com/marieglennalano/educational-hub',
-    demo: '#'
-  },
-  {
-    title: 'Certification Gallery',
-    description: 'Interactive showcase of professional certifications with modal previews and badge overlays.',
-    tech: ['Framer Motion', 'React', 'Tailwind CSS'],
-    image: 'https://source.unsplash.com/featured/?certificate',
-    github: 'https://github.com/marieglennalano/certifications',
-    demo: '#'
-  }
+  // {
+  //   title: 'Educational Resource Hub',
+  //   description: 'Single-page learning platform featuring categorized resources, interactive navigation, and smooth UI.',
+  //   tech: ['HTML', 'Bootstrap', 'JavaScript'],
+  //   image: 'https://source.unsplash.com/featured/?education',
+  //   github: 'https://github.com/marieglennalano/educational-hub',
+  //   demo: '#'
+  // },
+  // {
+  //   title: 'Certification Gallery',
+  //   description: 'Interactive showcase of professional certifications with modal previews and badge overlays.',
+  //   tech: ['Framer Motion', 'React', 'Tailwind CSS'],
+  //   image: 'https://source.unsplash.com/featured/?certificate',
+  //   github: 'https://github.com/marieglennalano/certifications',
+  //   demo: '#'
+  // }
 ];
 
 const Projects = () => {
   return (
     <section className="py-16 px-6 md:px-20 bg-gray-100" id="projects">
-      <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+      <h2 className="text-4xl font-bold text-center mb-12">PROJECTS</h2>
       <div className="grid gap-10 md:grid-cols-2">
         {projects.map((project, index) => (
           <div
