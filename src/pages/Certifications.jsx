@@ -1,19 +1,29 @@
 // src/pages/Certifications.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import frontendImg from '../assets/frontend.png';
+import backendImg from '../assets/backend.png';
+// import fullstackImg from '../assets/fullstack.png';
 
 const certifications = [
   {
-    title: 'Zuitt Web Development Bootcamp',
-    image: 'https://drive.google.com/uc?export=view&id=1zvykKgPlb3spqwm9trJNFHCenaPO1AUz',
+    title: 'Frontend Development Course',
+    image: frontendImg,
     issuer: 'Zuitt Coding Bootcamp',
     date: '2024',
     link: 'https://drive.google.com/file/d/1zvykKgPlb3spqwm9trJNFHCenaPO1AUz/view',
   },
   {
-    title: 'Responsive Web Design',
-    image: 'https://drive.google.com/uc?export=view&id=1secDVA2o03TM5kDRN-Oy8TY3_UKoWEdo',
-    issuer: 'freeCodeCamp',
+    title: 'Backend Development Course',
+    image: backendImg,
+    issuer: 'Zuitt Coding Bootcamp',
+    date: '2023',
+    link: 'https://drive.google.com/file/d/1secDVA2o03TM5kDRN-Oy8TY3_UKoWEdo/view',
+  },
+  {
+    title: 'Full Stack Development Course',
+    // image: fullstackImg,
+    issuer: 'Zuitt Coding Bootcamp',
     date: '2023',
     link: 'https://drive.google.com/file/d/1secDVA2o03TM5kDRN-Oy8TY3_UKoWEdo/view',
   },

@@ -50,11 +50,9 @@ const Contact = () => {
           <div>
             <h4 className="text-gray-600 dark:text-gray-400 uppercase mb-1 text-sm tracking-wider">SOCIAL MEDIA</h4>
             <div className="flex items-center space-x-4 text-2xl text-gray-700 dark:text-white">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
-              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer"><FaTelegramPlane /></a>
+              <a href="https://www.linkedin.com/in/marie-glenn-alano-4aab99118/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+              <a href="https://facebook.com/marieglenn.alano" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+              <a href="https://wa.me/09566371316" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
             </div>
           </div>
         </div>
