@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 import bgVideo from '../assets/bg-video.mp4';       
-import fallbackImg from '../assets/fallback-ink.jpg'; // the downloaded fallback image
+import fallbackImg from '../assets/fallback.jpg'; // the downloaded fallback image
 
 const Home = () => {
   return (
