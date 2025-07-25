@@ -16,29 +16,35 @@ const skills = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <motion.section
+      id="about"
+      className="py-24 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.h2
-          className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4"
+          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          ABOUT ME
+          About Me
         </motion.h2>
 
         {/* Subheading */}
         <motion.p
-          className="text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-12"
+          className="text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-14 text-lg"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Here you will find more information about me, what I do, and my current skills mostly in terms
-          of programming and technology.
+          Curious creator. Code enthusiast. Problem solver. I blend design, engineering, and empathy to craft user-first experiences.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -49,15 +55,30 @@ const About = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Get to know me!</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-              I'm a <strong>Frontend Focused Web Developer</strong> building and managing the front-end of websites and web applications that lead to the success of the overall product. Check out some of my work in the <strong>Projects</strong> section.
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Get to know me</h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-5 leading-relaxed">
+              I’m a <strong>Frontend-Focused Web Developer</strong> with a knack for clean code and responsive UI. I love turning ideas into beautiful, accessible websites that perform and impress.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              I enjoy sharing content about what I've learned in <strong>Web Development</strong> to help others in the dev community. Feel free to connect with me on
-              <a href="https://www.linkedin.com/in/marie-glenn-alano-4aab99118/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">LinkedIn</a>
-              or see my work on
-              <a href="https://github.com/marieglennalano" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 underline mx-1">GitHub</a>.
+              I also enjoy mentoring and sharing knowledge within the dev community. You’ll often find me exploring new tech stacks or designing in Figma. Let’s connect on
+              <a
+                href="https://www.linkedin.com/in/marie-glenn-alano-4aab99118/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 underline mx-1"
+              >
+                LinkedIn
+              </a>
+              or
+              <a
+                href="https://github.com/marieglennalano"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 underline mx-1"
+              >
+                GitHub
+              </a>
+              to see more.
             </p>
           </motion.div>
 
@@ -68,7 +89,7 @@ const About = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">SKILLS</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">My Toolbox</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 place-items-center">
               {skills.map((skill, index) => (
                 <motion.div
@@ -76,15 +97,15 @@ const About = () => {
                   className="flex flex-col items-center text-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileHover={{ scale: 1.15 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   viewport={{ once: true }}
                 >
                   <img
                     src={skill.src}
-                    alt={skill.name}
+                    alt={`${skill.name} logo`}
                     title={skill.name}
-                    className="w-12 h-12 mb-2 grayscale hover:grayscale-0 transition duration-300"
+                    className="w-12 h-12 mb-2 grayscale hover:grayscale-0 transition duration-300 ease-in-out"
                   />
                   <span className="text-sm text-gray-800 dark:text-gray-300">{skill.name}</span>
                 </motion.div>
@@ -93,7 +114,7 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
