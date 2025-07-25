@@ -44,7 +44,7 @@ const About = () => {
           transition={{ delay: 0.1, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Curious creator. Code enthusiast. Problem solver. I blend design, engineering, and empathy to craft user-first experiences.
+          Designer at heart. Engineer by training. Developer by choice. I bridge the gap between creativity and code to build experiences that resonate.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -57,10 +57,13 @@ const About = () => {
           >
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Get to know me</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-5 leading-relaxed">
-              I’m a <strong>Frontend-Focused Web Developer</strong> with a knack for clean code and responsive UI. I love turning ideas into beautiful, accessible websites that perform and impress.
+              With a background in engineering and a passion for design, I found my calling in Web development. I craft responsive, accessible web interfaces that blend performance with beauty.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              I also enjoy mentoring and sharing knowledge within the dev community. You’ll often find me exploring new tech stacks or designing in Figma. Let’s connect on
+              Whether it's building scalable components in React or polishing pixels in Figma, I love turning ideas into reality. I’m always exploring new tech, pushing boundaries, and staying curious.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+              Let’s connect on
               <a
                 href="https://www.linkedin.com/in/marie-glenn-alano-4aab99118/"
                 target="_blank"
@@ -69,7 +72,7 @@ const About = () => {
               >
                 LinkedIn
               </a>
-              or
+              or check out my code on
               <a
                 href="https://github.com/marieglennalano"
                 target="_blank"
@@ -78,11 +81,11 @@ const About = () => {
               >
                 GitHub
               </a>
-              to see more.
+              — I’d love to connect.
             </p>
           </motion.div>
 
-          {/* Right Column - Skill Logos */}
+          {/* Right Column - Skills */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
