@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import frontendImg from '../assets/frontend.png';
 import backendImg from '../assets/backend.png';
+import fullstackImg from '../assets/fullstack.jpeg';
 
 const certifications = [
   {
@@ -22,10 +23,10 @@ const certifications = [
   },
   {
     title: 'Full Stack Development Course (MERN)',
-    image: '', 
+    image: fullstackImg, 
     issuer: 'Zuitt Coding Bootcamp',
     date: '2025',
-    link: '', 
+    link: 'https://drive.google.com/file/d/1z2m2-sHr845KS250ugKVyYKkTSExSZ9a/view?usp=drive_link', 
   },
 ];
 
